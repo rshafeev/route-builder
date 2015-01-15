@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>Using CloudMade Routing with OpenLayers</title>
+	<link rel="stylesheet" href="openlayers/theme/default/style.css" type="text/css" />
+</head>
+
+<body>	
+	<div id="map" style="width: 600px; height: 600px;"></div>
+	
+	<script type="text/javascript" src="openlayers/OpenLayers.js"></script>
+	<script type="text/javascript" src="cloudmade.js"></script>
+	
+	<script type="text/javascript">
+		var map = new OpenLayers.Map("map", {
+	      controls: [
+	         new OpenLayers.Control.Navigation(),
+	         new OpenLayers.Control.PanZoomBar(),
+	         new OpenLayers.Control.ScaleLine(),
+			 new OpenLayers.Control.Attribution(),
+			 new OpenLayers.Control.LayerSwitcher()
+	      ]
+	    });
+		
+		var cloudmade = new OpenLayers.Layer.CloudMade("CloudMade", {
+			key: 'BC9A493B41014CAABB98F0471D759707'
+		});
+		map.addLayer(cloudmade);
+
+		var epsg4326 = new OpenLayers.Projection("EPSG:4326");
+		var center = new OpenLayers.LonLat(36, 50).transform(epsg4326, map.getProjectionObject());
+		map.setCenter(center, 6);
+		
+		
+		var from = new OpenLayers.LonLat(30.30, 50.27);
+		var to = new OpenLayers.LonLat(36, 50);
+		
+		
+		var vectors = new OpenLayers.Layer.Vector("Vectors");
+		map.addLayer(vectors);
+		
+		function addScript(url) {
+			var script = document.createElement('script');
+			script.type = 'text/javascript';
+			script.src = url;
+			document.getElementsByTagName('head')[0].appendChild(script);
+		}
+		
+		function getRoute(response) {
+			var points = [];
+			for (var i = 0; i < response.route_geometry.length; i++) {
+				var point = new OpenLayers.Geometry.Point(
+						response.route_geometry[i][1], 
+						response.route_geometry[i][0]);
+				//points.push(point);
+                                points.push(point.transform(epsg4326, map.getProjectionObject()));
+			}
+			alert(points);
+			var geometry = new OpenLayers.Geometry.LineString(points);
+			var feature = new OpenLayers.Feature.Vector(geometry, null, {
+				strokeColor: "#0033ff",
+				strokeOpacity: 0.7,
+				strokeWidth: 5
+			});
+			vectors.addFeatures(feature);
+		}
+		
+		addScript('http://routes.cloudmade.com/BC9A493B41014CAABB98F0471D759707/api/0.3/' +
+				from.lat + ',' + from.lon + ',' + to.lat + ',' + to.lon + 
+				'/car.js?callback=getRoute');
+				
+				
+		var markers = new OpenLayers.Layer.Markers("Markers");
+		map.addLayer(markers);
+		
+		markers.addMarker(new OpenLayers.Marker(
+				from.clone().transform(epsg4326, map.getProjectionObject())));
+		markers.addMarker(new OpenLayers.Marker(
+				to.clone().transform(epsg4326, map.getProjectionObject())));
+	</script>
+</body>
+</html>

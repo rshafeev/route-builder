@@ -1,0 +1,361 @@
+int colorIndexInputs = 0;
+int colorIndexOutputs = 0;
+// Supplier 1
+	Generic_agent s1 = add_agent();
+	s1.Name="Mon_Sup";
+	s1.agent_type=1;
+	s1.generic=true;
+	//coordinates
+		s1.setXY(100, 100);
+	// Fill BOM
+		BOM moni = new BOM();
+		moni.productName = "Monitor";
+		moni.input = "MonitorInput";
+		moni.quantity = 1;
+		s1.listOfBOM.add(moni);
+	// Fill  parameters of Final Products
+		// Fill inventory policie of Final products 
+		Policy _policyType1 = new Policy ();
+		_policyType1.policy = "sS";
+		_policyType1.product = "Monitor";
+		s1.inventoryManagement.addPolicy(_policyType1);
+		Ss_Policy levels1 = new Ss_Policy("Monitor",10,6);
+		s1.inventoryManagement.add(levels1);
+		s1.stock.add("Monitor",10,"NotReserved");	
+		//Fil initial price
+		PriceL p1 = new PriceL();
+		p1.name= "Monitor";
+		p1.price = 5;
+		p1.currency="Euros";
+		s1.priceList.addPrice(p1);
+		//Fill Production rate 
+		ProductionRate pr1 = new ProductionRate();
+		pr1.output ="Monitor";
+		pr1.rate= 5;
+		// Fill Strategy
+		Policy pol1= new Policy();
+		pol1.product = "Monitor";
+		pol1.policy = "MtS";
+		s1.productionManagement.addInitialPC(pr1,pol1);
+	// Fill parameter of Raw materials
+		//Fill initial cost Rawm Materials
+		PriceL c1 = new PriceL();
+		c1.name= "MonitorInput";
+		c1.price = 0.1;
+		c1.currency="Euros";
+		s1.priceList.addCost(c1);
+		//Fill inventory policie
+		Policy _policyType11 = new Policy ();
+		_policyType11.policy = "sS";
+		_policyType11.product = "MonitorInput";
+		s1.inventoryManagement.addPolicy(_policyType11);
+		Ss_Policy levels11 = new Ss_Policy("MonitorInput",100,1);
+		s1.inventoryManagement.add(levels11);
+		s1.stock.add("MonitorInput",100,"NotReserved");	
+	//Fill Graphics	
+		//Fill graphic of Final Product
+		DataSet ds1= new DataSet(1000);
+		String dsName1 = s1.Name + " : " + "Monitor";
+		InventoryOutputProducts.addDataSet(ds1, dsName1, colors.get(colorIndexOutputs++), true, Chart2DPlot.INTERPOLATION_STEP, 1, Chart2DPlot.POINT_NONE);
+		datasets.add(ds1);
+		datasetNames.add(dsName1);		
+		//Fill graphic of Raw Material
+		DataSet ds11= new DataSet(1000);
+		String dsName11 = s1.Name + " : " + "MonitorInput";
+		InventoryInputProducts.addDataSet(ds11, dsName11, colors.get(colorIndexInputs++), true, Chart2DPlot.INTERPOLATION_STEP, 1, Chart2DPlot.POINT_NONE);
+		datasets.add(ds11);
+		datasetNames.add(dsName11);		
+	
+// Supplier 2
+	Generic_agent s2 = add_agent();
+	s2.Name="Kyb_Sup";
+	s2.agent_type=1;
+	s2.generic=true;
+	//coordinates
+		s2.setXY(100, 250);
+	// Fill BOM
+		BOM kyb = new BOM();
+		kyb.productName = "Keyboard";
+		kyb.input = "KeyboardInput";
+		kyb.quantity = 1;
+		s2.listOfBOM.add(kyb);
+	// Fill  parameters of Final Products
+		// Fill inventory policie of Final products 
+		Policy _policyType2 = new Policy ();
+		_policyType2.policy = "sS";
+		_policyType2.product = "Keyboard";
+		s2.inventoryManagement.addPolicy(_policyType2);
+		Ss_Policy levels2 = new Ss_Policy("Keyboard",10,6);
+		s2.inventoryManagement.add(levels2);
+		s2.stock.add("Keyboard",7,"NotReserved");	
+		//Fil initial price
+		PriceL p2 = new PriceL();
+		p2.name= "Keyboard";
+		p2.price = 3;
+		p2.currency="Euros";
+		s2.priceList.addPrice(p2);
+		//Fill Production rate 
+		ProductionRate pr2 = new ProductionRate();
+		pr2.output ="Keyboard";
+		pr2.rate= 5;
+		// Fill Strategy
+		Policy pol2= new Policy();
+		pol2.product = "Keyboard";
+		pol2.policy = "MtS";
+		s2.productionManagement.addInitialPC(pr2,pol2);
+	// Fill parameter of Raw materials
+		//Fill initial cost Rawm Materials
+		PriceL c2 = new PriceL();
+		c2.name= "KeyboardInput";
+		c2.price = 0.1;
+		c2.currency="Euros";
+		s2.priceList.addCost(c2);
+		//Fill inventory policie
+		Policy _policyType22 = new Policy ();
+		_policyType22.policy = "sS";
+		_policyType22.product = "KeyboardInput";
+		s2.inventoryManagement.addPolicy(_policyType22);
+		Ss_Policy levels22 = new Ss_Policy("KeyboardInput",100,1);
+		s2.inventoryManagement.add(levels22);
+		s2.stock.add("KeyboardInput",100,"NotReserved");
+		//Fill Graphics	
+		//Fill graphic of Final Product
+		DataSet ds2= new DataSet(1000);
+		String dsName2 = s2.Name + " : " + "Keyboard";
+		InventoryOutputProducts.addDataSet(ds2, dsName2, colors.get(colorIndexOutputs++), true, Chart2DPlot.INTERPOLATION_STEP, 1, Chart2DPlot.POINT_NONE);
+		datasets.add(ds2);
+		datasetNames.add(dsName2);		
+		//Fill graphic of Raw Material
+		DataSet ds22= new DataSet(1000);
+		String dsName22 = s2.Name + " : " + "KeyboardInput";
+		InventoryInputProducts.addDataSet(ds22, dsName22, colors.get(colorIndexInputs++), true, Chart2DPlot.INTERPOLATION_STEP, 1, Chart2DPlot.POINT_NONE);
+		datasets.add(ds22);
+		datasetNames.add(dsName22);		
+	
+		
+	
+// Supplier 3
+	Generic_agent s3 = add_agent();
+	s3.Name="CPU_Sup";
+	s3.agent_type=1;
+	s3.generic=true;
+	//coordinates
+		s3.setXY(100, 400);
+	// Fill BOM
+		BOM _cpu = new BOM();
+		_cpu.productName = "CPU";
+		_cpu.input = "CPUInput";
+		_cpu.quantity = 1;
+		s3.listOfBOM.add(_cpu);			
+	// Fill  parameters of Final Products
+		// Fill inventory policie of Final products 
+		Policy _policyType3 = new Policy ();
+		_policyType3.policy = "sS";
+		_policyType3.product = "CPU";
+		s3.inventoryManagement.addPolicy(_policyType3);
+		Ss_Policy levels3 = new Ss_Policy("CPU",10,6);
+		s3.inventoryManagement.add(levels3);
+		s3.stock.add("CPU",11,"NotReserved");	
+		//Fil initial price
+		PriceL p3 = new PriceL();
+		p3.name= "CPU";
+		p3.price = 7;
+		p3.currency="Euros";
+		s3.priceList.addPrice(p3);
+		//Fill Production rate 
+		ProductionRate pr3 = new ProductionRate();
+		pr3.output ="CPU";
+		pr3.rate= 5;
+		// Fill Strategy
+		Policy pol3= new Policy();
+		pol3.product = "CPU";
+		pol3.policy = "MtS";
+		s3.productionManagement.addInitialPC(pr3,pol3);
+	// Fill parameter of Raw materials
+		//Fill initial cost Rawm Materials
+		PriceL c3 = new PriceL();
+		c3.name= "CPUInput";
+		c3.price = 0.1;
+		c3.currency="Euros";
+		s3.priceList.addCost(c3);
+		//Fill inventory policie
+		Policy _policyType33 = new Policy ();
+		_policyType33.policy = "sS";
+		_policyType33.product = "CPUInput";
+		s3.inventoryManagement.addPolicy(_policyType33);
+		Ss_Policy levels33 = new Ss_Policy("CPUInput",100,1);
+		s3.inventoryManagement.add(levels33);
+		s3.stock.add("CPUInput",100,"NotReserved");
+	//Fill Graphics	
+		//Fill graphic of Final Product
+		DataSet ds3= new DataSet(1000);
+		String dsName3 = s3.Name + " : " + "CPU";
+		InventoryOutputProducts.addDataSet(ds3, dsName3, colors.get(colorIndexOutputs++), true, Chart2DPlot.INTERPOLATION_STEP, 1, Chart2DPlot.POINT_NONE);
+		datasets.add(ds3);
+		datasetNames.add(dsName3);		
+		//Fill graphic of Raw Material
+		DataSet ds33= new DataSet(1000);
+		String dsName33 = s3.Name + " : " + "CPUInput";
+		InventoryInputProducts.addDataSet(ds33, dsName33, colors.get(colorIndexInputs++), true, Chart2DPlot.INTERPOLATION_STEP, 1, Chart2DPlot.POINT_NONE);
+		datasets.add(ds33);
+		datasetNames.add(dsName33);	
+		
+// Producer
+	Generic_agent _p1 = add_agent();
+	_p1.Name="Producer";
+	_p1.agent_type=1;
+	_p1.generic=true;
+	//coordinates
+		_p1.setXY(300, 250);
+	// Fill BOM
+		BOM _monitor = new BOM();
+		_monitor.productName = "COMPUTER";
+		_monitor.input = "Monitor";
+		_monitor.quantity = 1;
+		_p1.listOfBOM.add(_monitor);
+		BOM _Keyboard = new BOM();
+		_Keyboard.productName = "COMPUTER";
+		_Keyboard.input = "Keyboard";
+		_Keyboard.quantity = 1;
+		_p1.listOfBOM.add(_Keyboard);
+		BOM _CPUpart = new BOM();
+		_CPUpart.productName = "COMPUTER";
+		_CPUpart.input = "CPU";
+		_CPUpart.quantity = 1;
+		_p1.listOfBOM.add(_CPUpart);
+		
+		// Fill  parameters of Final Products
+		// Fill inventory policie of Final products 
+		Policy _policyType_p1 = new Policy ();
+		_policyType_p1.policy = "sS";
+		_policyType_p1.product = "COMPUTER";
+		_p1.inventoryManagement.addPolicy(_policyType_p1);
+		Ss_Policy levels_p1 = new Ss_Policy("COMPUTER",10,6);
+		_p1.inventoryManagement.add(levels_p1);
+		_p1.stock.add("COMPUTER",10,"NotReserved");	
+		//Fil initial price
+		PriceL p_p1 = new PriceL();
+		p_p1.name= "COMPUTER";
+		p_p1.price =21;
+		p_p1.currency="Euros";
+		_p1.priceList.addPrice(p_p1);
+		//Fill Production rate 
+		ProductionRate pr_p1 = new ProductionRate();
+		pr_p1.output ="COMPUTER";
+		pr_p1.rate= 5;
+		// Fill Strategy
+		Policy pol_p1= new Policy();
+		pol_p1.product = "COMPUTER";
+		pol_p1.policy = "MtS";
+		_p1.productionManagement.addInitialPC(pr_p1,pol_p1);
+	// Fill parameter of Raw materials
+		//Fill initial cost Raw Materials
+		//Monitor
+			PriceL c_p11 = new PriceL();
+			c_p11.name= "Monitor";
+			c_p11.price = 0.1;
+			c_p11.currency="Euros";
+			_p1.priceList.addCost(c_p11);
+			//Fill inventory policie
+			Policy _policyType_p11 = new Policy ();
+			_policyType_p11.policy = "sS";
+			_policyType_p11.product = "Monitor";
+			_p1.inventoryManagement.addPolicy(_policyType_p11);
+			Ss_Policy levels_p11 = new Ss_Policy("Monitor",20,16);
+			_p1.inventoryManagement.add(levels_p11);
+			_p1.stock.add("Monitor",20,"NotReserved");
+		//CPU
+			PriceL c_p12 = new PriceL();
+			c_p12.name= "CPU";
+			c_p12.price = 0.1;
+			c_p12.currency="Euros";
+			_p1.priceList.addCost(c_p12);
+			//Fill inventory policie
+			Policy _policyType_p12 = new Policy ();
+			_policyType_p12.policy = "sS";
+			_policyType_p12.product = "CPU";
+			_p1.inventoryManagement.addPolicy(_policyType_p12);
+			Ss_Policy levels_p12 = new Ss_Policy("CPU",20,16);
+			_p1.inventoryManagement.add(levels_p12);
+			_p1.stock.add("CPU",20,"NotReserved");
+		//Keyboard
+			PriceL c_p13 = new PriceL();
+			c_p13.name= "Keyboard";
+			c_p13.price = 0.1;
+			c_p13.currency="Euros";
+			_p1.priceList.addCost(c_p13);
+			//Fill inventory policie
+			Policy _policyType_p13 = new Policy ();
+			_policyType_p13.policy = "sS";
+			_policyType_p13.product = "Keyboard";
+			_p1.inventoryManagement.addPolicy(_policyType_p13);
+			Ss_Policy levels_p13 = new Ss_Policy("Keyboard",20,16);
+			_p1.inventoryManagement.add(levels_p13);
+			_p1.stock.add("Keyboard",20,"NotReserved");		
+		//Fill Graphics	
+			//Fill graphic of Final Product
+			DataSet ds_p1= new DataSet(1000);
+			String dsName_p1 = _p1.Name + " : " + "COMPUTER";
+			InventoryOutputProducts.addDataSet(ds_p1, dsName_p1, colors.get(colorIndexOutputs++), true, Chart2DPlot.INTERPOLATION_STEP, 1, Chart2DPlot.POINT_NONE);
+			datasets.add(ds_p1);
+			datasetNames.add(dsName_p1);		
+			//Fill graphic of Raw Material
+			DataSet ds_p11= new DataSet(1000);
+			String dsName_p11 = _p1.Name + " : " + "Monitor";
+			InventoryInputProducts.addDataSet(ds_p11, dsName_p11, colors.get(colorIndexInputs++), true, Chart2DPlot.INTERPOLATION_STEP, 1, Chart2DPlot.POINT_NONE);
+			datasets.add(ds_p11);
+			datasetNames.add(dsName_p11);	
+			//Fill graphic of Raw Material
+			DataSet ds_p12= new DataSet(1000);
+			String dsName_p12 = _p1.Name + " : " + "CPU";
+			InventoryInputProducts.addDataSet(ds_p12, dsName_p12, colors.get(colorIndexInputs++), true, Chart2DPlot.INTERPOLATION_STEP, 1, Chart2DPlot.POINT_NONE);
+			datasets.add(ds_p12);
+			datasetNames.add(dsName_p12);	
+			//Fill graphic of Raw Material
+			DataSet ds_p13= new DataSet(1000);
+			String dsName_p13 = _p1.Name + " : " + "Keyboard";
+			InventoryInputProducts.addDataSet(ds_p13, dsName_p13, colors.get(colorIndexInputs++), true, Chart2DPlot.INTERPOLATION_STEP, 1, Chart2DPlot.POINT_NONE);
+			datasets.add(ds_p13);
+			datasetNames.add(dsName_p13);	
+			
+
+//Fill Demand agent
+	Generic_agent d1 = add_agent();
+	d1.Name = "Demand";
+	d1.agent_type=2;
+	d1.demand=true;
+	//coordinates
+	d1.setXY(600, 100);
+	// Fill BOM
+		BOM abc = new BOM();
+		abc.productName = "";
+		abc.input = "COMPUTER";
+		abc.quantity = 1;
+		d1.listOfBOM.add(abc);
+	//Fill Demand Type
+	Policy _demandType1 = new Policy();
+	_demandType1.product = "COMPUTER";
+	_demandType1.policy = "Random";
+	d1.inventoryManagement_Demand1.DemandType.add(_demandType1);
+	d1.inventoryManagement_Demand1.marketSize = 1;	
+		
+	
+//Fill Demand2 agent
+	Generic_agent d2 = add_agent();
+	d2.Name = "Demand1";
+	d2.agent_type=2;
+	d2.demand=true;
+	//coordinates
+	d2.setXY(600, 350);
+	// Fill BOM
+		BOM _abc = new BOM();
+		_abc.productName = "";
+		_abc.input = "COMPUTER";
+		_abc.quantity = 1;
+		d2.listOfBOM.add(_abc);
+	//Fill Demand Type
+	Policy _demandType2 = new Policy();
+	_demandType2.product = "COMPUTER";
+	_demandType2.policy = "Random";
+	d2.inventoryManagement_Demand1.DemandType.add(_demandType2);
+	d2.inventoryManagement_Demand1.marketSize = 1;

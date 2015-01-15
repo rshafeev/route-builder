@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\OSM">
+      <UniqueIdentifier>{ccf8c906-af98-4948-bd72-5f27e51846e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OSM">
+      <UniqueIdentifier>{5b8246da-cc1c-416b-a191-c72bd3226b39}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="InetLib.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="res\InetLib.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="png1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icon1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="InetLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSMCtrl.cpp">
+      <Filter>Source Files\OSM</Filter>
+    </ClCompile>
+    <ClCompile Include="OSMCtrlCircle.cpp">
+      <Filter>Source Files\OSM</Filter>
+    </ClCompile>
+    <ClCompile Include="OSMCtrlMapOperations.cpp">
+      <Filter>Source Files\OSM</Filter>
+    </ClCompile>
+    <ClCompile Include="OSMCtrlPolygon.cpp">
+      <Filter>Source Files\OSM</Filter>
+    </ClCompile>
+    <ClCompile Include="OSMCtrlPolyline.cpp">
+      <Filter>Source Files\OSM</Filter>
+    </ClCompile>
+    <ClCompile Include="OSMCtrlPosition.cpp">
+      <Filter>Source Files\OSM</Filter>
+    </ClCompile>
+    <ClCompile Include="OSMCtrlTimerEventHandler.cpp">
+      <Filter>Source Files\OSM</Filter>
+    </ClCompile>
+    <ClCompile Include="enumser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchDlg.cpp">
+      <Filter>Source Files\OSM</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchResultsDlg.cpp">
+      <Filter>Source Files\OSM</Filter>
+    </ClCompile>
+    <ClCompile Include="TilePropertiesDlg.cpp">
+      <Filter>Source Files\OSM</Filter>
+    </ClCompile>
+    <ClCompile Include="OSMCtrlHelper.cpp">
+      <Filter>Source Files\OSM</Filter>
+    </ClCompile>
+    <ClCompile Include="OSMCtrlTileProviders.cpp">
+      <Filter>Source Files\OSM</Filter>
+    </ClCompile>
+    <ClCompile Include="RouteCloudeMade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WebGrab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InetLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSMCtrl.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="OSMCtrlCachedTile.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="OSMCtrlCircle.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="OSMCtrlGPX.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="OSMCtrlHandler.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="OSMCtrlHelper.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="OSMCtrlIcon.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="OSMCtrlMapOperations.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="OSMCtrlMarker.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="OSMCtrlNode.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="OSMCtrlPolygon.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="OSMCtrlPolyline.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="OSMCtrlPosition.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="OSMCtrlTileProviders.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="OSMCtrlTimerEventHandler.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="SortedArray.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="cnominatim.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="enumser.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="SearchDlg.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="SearchResultsDlg.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="TilePropertiesDlg.h">
+      <Filter>Header Files\OSM</Filter>
+    </ClInclude>
+    <ClInclude Include="RouteCloudeMade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WebGrab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iconv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WebGrabData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="InetLib.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="libxml2-2.7.8.win32\lib\libxml2.lib" />
+  </ItemGroup>
+</Project>

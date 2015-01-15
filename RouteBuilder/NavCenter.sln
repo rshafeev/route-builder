@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NavCenter", "NavCenter\NavCenter.vcxproj", "{EE6E04BA-DC73-46CD-9101-01E60F2B1E7A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NavCenter.DB", "NavCenter.DB\NavCenter.DB.vcxproj", "{BD2DEF34-5549-4C97-9508-C1967259BB3E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFCComponentExt", "MFCComponentExt\MFCComponentExt.vcxproj", "{D38DF1B3-3F9B-4620-BA64-237A77FC1390}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InetLib", "InetLib\InetLib.vcxproj", "{2F204314-00A8-405A-8A8B-EF11EF003172}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE6E04BA-DC73-46CD-9101-01E60F2B1E7A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EE6E04BA-DC73-46CD-9101-01E60F2B1E7A}.Debug|Win32.Build.0 = Debug|Win32
+		{EE6E04BA-DC73-46CD-9101-01E60F2B1E7A}.Debug|x64.ActiveCfg = Debug|Win32
+		{EE6E04BA-DC73-46CD-9101-01E60F2B1E7A}.Release|Win32.ActiveCfg = Release|Win32
+		{EE6E04BA-DC73-46CD-9101-01E60F2B1E7A}.Release|Win32.Build.0 = Release|Win32
+		{EE6E04BA-DC73-46CD-9101-01E60F2B1E7A}.Release|x64.ActiveCfg = Release|Win32
+		{BD2DEF34-5549-4C97-9508-C1967259BB3E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BD2DEF34-5549-4C97-9508-C1967259BB3E}.Debug|Win32.Build.0 = Debug|Win32
+		{BD2DEF34-5549-4C97-9508-C1967259BB3E}.Debug|x64.ActiveCfg = Debug|Win32
+		{BD2DEF34-5549-4C97-9508-C1967259BB3E}.Release|Win32.ActiveCfg = Release|Win32
+		{BD2DEF34-5549-4C97-9508-C1967259BB3E}.Release|Win32.Build.0 = Release|Win32
+		{BD2DEF34-5549-4C97-9508-C1967259BB3E}.Release|x64.ActiveCfg = Release|Win32
+		{D38DF1B3-3F9B-4620-BA64-237A77FC1390}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D38DF1B3-3F9B-4620-BA64-237A77FC1390}.Debug|Win32.Build.0 = Debug|Win32
+		{D38DF1B3-3F9B-4620-BA64-237A77FC1390}.Debug|x64.ActiveCfg = Debug|Win32
+		{D38DF1B3-3F9B-4620-BA64-237A77FC1390}.Release|Win32.ActiveCfg = Release|Win32
+		{D38DF1B3-3F9B-4620-BA64-237A77FC1390}.Release|Win32.Build.0 = Release|Win32
+		{D38DF1B3-3F9B-4620-BA64-237A77FC1390}.Release|x64.ActiveCfg = Release|Win32
+		{2F204314-00A8-405A-8A8B-EF11EF003172}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2F204314-00A8-405A-8A8B-EF11EF003172}.Debug|Win32.Build.0 = Debug|Win32
+		{2F204314-00A8-405A-8A8B-EF11EF003172}.Debug|x64.ActiveCfg = Debug|Win32
+		{2F204314-00A8-405A-8A8B-EF11EF003172}.Release|Win32.ActiveCfg = Release|Win32
+		{2F204314-00A8-405A-8A8B-EF11EF003172}.Release|Win32.Build.0 = Release|Win32
+		{2F204314-00A8-405A-8A8B-EF11EF003172}.Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1 @@
+cacls "C:\Program files\common files\system\ado\msado15.dll" /G %username%:F
