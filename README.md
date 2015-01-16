@@ -3,7 +3,7 @@ The modeling platform follows a rigorous development process framework, where mo
 process framework. An agent based simulation platform is presented for generic supply chain modeling adding flexibility and configurability over existing models.
 
 #See demonstration video:#
-* [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/jWkSbgRwfmw/0.jpg)](http://www.youtube.com/watch?v=jWkSbgRwfmw)
+* [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/ZyzYDhluSdE/0.jpg)](http://www.youtube.com/watch?v=ZyzYDhluSdE)
 
 ### Used technologies and tools ###
 * Basic:  Java, Anylogic 6.6
