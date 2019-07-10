@@ -2,7 +2,7 @@
 The modeling platform follows a rigorous development process framework, where model validity is ensured by using Supply Chain Operations Reference as theoretical
 process framework. An agent based simulation platform is presented for generic supply chain modeling adding flexibility and configurability over existing models.
 
-#See demonstration video:#
+# See demonstration video:#
 * [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/ZyzYDhluSdE/0.jpg)](http://www.youtube.com/watch?v=ZyzYDhluSdE)
 
 ### Used technologies and tools ###
